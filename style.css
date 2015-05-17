@@ -1,0 +1,53 @@
+@n0m-size: 12pt;
+@n0m-color: rgba(170, 50, 30, .7);
+@n0m-color-ui: darken(@n0m-color, 25%);
+div{
+  margin:5px;
+}
+input[type=checkbox], input[type=radio] {
+  display: none;
+}
+input[type=checkbox] + label:before {
+  content: "";
+  display: inline-block;
+  height: @n0m-size;
+  width: @n0m-size;
+  border: 1px solid @n0m-color-ui;
+  font-size: @n0m-size;
+  line-height: @n0m-size;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 5px;
+  color: @n0m-color;
+  transition: color ease .5s;
+}
+input[type=checkbox]:checked + label:before {
+  color: darken(@n0m-color, 25%);
+  content: "\2714";
+}
+
+input[type=checkbox]:checked + label:before {
+    color: @n0m-size;
+}
+
+input[type=radio] + label:before {
+    content: "";
+    border: 1px solid @n0m-color-ui;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 0;    
+    line-height: @n0m-size;
+    height: @n0m-size;
+    width: @n0m-size;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 5px;
+    color:@n0m-color;
+    transition: color ease .5s;
+    transition: font-size ease .2s;
+}
+input[type=radio]:checked + label:before {
+    font-size: @n0m-size; 
+    color: darken(@n0m-color, 25%);
+    content: "\25cf";
+}
