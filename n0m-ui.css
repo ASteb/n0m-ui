@@ -1,0 +1,46 @@
+input[type=checkbox],
+input[type=radio] {
+  display: none;
+}
+input[type=checkbox] + label:before {
+  content: "";
+  display: inline-block;
+  height: 12pt;
+  width: 12pt;
+  border: 1px solid #5b5b5b;
+  font-size: 12pt;
+  line-height: 12pt;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 5px;
+  color: #9b9b9b;
+  transition: color ease .5s;
+}
+input[type=checkbox]:checked + label:before {
+  color: #5b5b5b;
+  content: "\2714";
+}
+input[type=checkbox]:checked + label:before {
+  color: 12pt;
+}
+input[type=radio] + label:before {
+  content: "";
+  border: 1px solid #5b5b5b;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 12pt;
+  height: 12pt;
+  width: 12pt;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 5px;
+  color: #9b9b9b;
+  transition: color ease .5s;
+  transition: font-size ease 0.2s;
+}
+input[type=radio]:checked + label:before {
+  font-size: 12pt;
+  color: #5b5b5b;
+  content: "\25cf";
+}
